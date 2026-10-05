@@ -31,3 +31,5 @@ module.exports = async (req, res) => {
     return res.status(200).json({ words });
   } catch (e) {
     return res.status(502).json({ error: "Debug: " + String(e.message).slice(0, 250) });
+  }
+};
