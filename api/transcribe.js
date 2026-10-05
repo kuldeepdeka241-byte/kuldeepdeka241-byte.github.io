@@ -30,6 +30,4 @@ module.exports = async (req, res) => {
       .filter((w) => w.text);
     return res.status(200).json({ words });
   } catch (e) {
-    return res.status(502).json({ error: "The transcription service did not respond. Try again in a moment." });
-  }
-};
+    return res.status(502).json({ error: "Debug: " + String(e.message).slice(0, 250) });
